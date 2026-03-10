@@ -1,6 +1,6 @@
 # Laravel API Foundation
 
-Small Laravel package for consistent APIs: versioned routes (e.g. `/api/v1/`), standard JSON response and error format, and pagination. Use it so all your endpoints look and behave the same.
+Keeps your Laravel API consistent: versioned routes (v1, v2, v3…), same JSON shape for success and errors, and pagination. No config needed for new versions—just use them in the URL.
 
 ## Install
 
@@ -16,7 +16,7 @@ php artisan vendor:publish --tag=api-foundation-config
 
 ## Versioned routes
 
-Any version works: `/api/v1/...`, `/api/v2/...`, `/api/v3/...` — no config needed. Add new versions anytime by just using them in the URL.
+Hit `/api/v1/users`, `/api/v2/users`, `/api/v99/users`—all work. No need to add each version in config.
 
 In `App\Providers\RouteServiceProvider` or `routes/api.php`:
 
@@ -33,7 +33,7 @@ This registers `/api/v1/users`, `/api/v2/users`, `/api/v3/users`, etc. Get the c
 
 ## Response format
 
-Use the helper so success responses look the same:
+Success responses:
 
 ```php
 use Tpjasar\ApiFoundation\Response\ApiResponse;
@@ -65,12 +65,7 @@ return ApiResponse::paginated($users);
 
 ## Config
 
-`config/api-foundation.php` (after publish):
-
-- `prefix` – API prefix (default `api`)
-- Versions are automatic (v1, v2, v3, …); no list to maintain
-- `response.data_key`, `error_key`, etc. – Keys used in JSON
-- `pagination.*` – Keys for pagination meta
+Publish with `--tag=api-foundation-config`. You can change the JSON keys (data_key, error_key, etc.) and pagination meta keys. Set `prefix` to `''` if your routes are already under `api`.
 
 ## License
 
