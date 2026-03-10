@@ -1,6 +1,6 @@
 # Laravel API Foundation
 
-Keeps your Laravel API consistent: versioned routes (v1, v2, v3…), same JSON shape for success and errors, and pagination. No config needed for new versions—just use them in the URL.
+Keeps your Laravel API consistent: versioned routes (v1, v2, v3…), same JSON shape for success and errors, and pagination. No config needed for new versions - just use them in the URL.
 
 ## Install
 
@@ -16,7 +16,7 @@ php artisan vendor:publish --tag=api-foundation-config
 
 ## Versioned routes
 
-Hit `/api/v1/users`, `/api/v2/users`, `/api/v99/users`—all work. No need to add each version in config.
+Hit `/api/v1/users`, `/api/v2/users`, `/api/v99/users`- all work. No need to add each version in config.
 
 In `App\Providers\RouteServiceProvider` or `routes/api.php`:
 
