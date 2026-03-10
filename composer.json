@@ -1,0 +1,31 @@
+{
+    "name": "tpjasar/laravel-api-foundation",
+    "description": "API versioning, standard JSON response/error format, and pagination for Laravel APIs",
+    "keywords": ["laravel", "api", "versioning", "rest", "response", "pagination"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Muhammad Jasar T P",
+            "email": "tpjasar88@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0.2",
+        "laravel/framework": "^9.0|^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tpjasar\\ApiFoundation\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tpjasar\\ApiFoundation\\ApiFoundationServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
